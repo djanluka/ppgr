@@ -1,0 +1,9 @@
+//static double alpha_cur, beta_cur, gamma_cur;
+
+        #ifdef LERP  
+            alpha_cur = (1-animation_parameter/tm)*alpha_1 + animation_parameter/tm*alpha_2; 
+            beta_cur = (1-animation_parameter/tm)*beta_1 + animation_parameter/tm*beta_2;
+            gamma_cur = (1-animation_parameter/tm)*gamma_1 + animation_parameter/tm*gamma_2;
+
+            Eigen::Matrix3d matrix_A = Euler2A(alpha_cur, beta_cur, gamma_cur);
+        #endif
